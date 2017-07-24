@@ -4,22 +4,9 @@
  * and open the template in the editor.
  */
 
+
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
-var VisiteSchema = new Schema({
-    type : {
-        type : String,
-        default : "Consultation"
-    },
-    dateVisite : {
-        type : Date
-    },
-    medecin : {
-        type : String
-    }
-});
-
 
 var individuSchema = new Schema({
     name : {
@@ -31,8 +18,7 @@ var individuSchema = new Schema({
     },
     dateOfBirth : {
         type : Date        
-    },
-    visite : VisiteSchema
+    }
 });    
 
 var Individu = mongoose.model('individu', individuSchema);
